@@ -40,10 +40,12 @@ spec:
   selector:
     matchLabels:
       app: {{.Values.name}}
+      harness.io/color: blue
   template:
     metadata:
       labels:
         app: {{.Values.name}}
+        harness.io/color: blue
     spec:
       {{- if .Values.dockercfg}}
       imagePullSecrets:
